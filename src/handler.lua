@@ -13,7 +13,7 @@ local validate_client_roles = require("kong.plugins.jwt-keycloak.validators.role
 
 local re_gmatch = ngx.re.gmatch
 
--- local JwtKeycloakHandler = BasePlugin:extend()
+local JwtKeycloakHandler = BasePlugin:extend()
 
 
 local priority_env_var = "JWT_KEYCLOAK_PRIORITY"
