@@ -13,7 +13,7 @@ local validate_client_roles = require("kong.plugins.jwt-keycloak.validators.role
 
 local re_gmatch = ngx.re.gmatch
 
-local JwtKeycloakHandler = BasePlugin:extend()
+-- local JwtKeycloakHandler = BasePlugin:extend()
 
 
 local priority_env_var = "JWT_KEYCLOAK_PRIORITY"
@@ -171,9 +171,9 @@ local function retrieve_token(conf)
     end
 end
 
-function JwtKeycloakHandler:new()
-    JwtKeycloakHandler.super.new(self, "jwt-keycloak")
-end
+-- function JwtKeycloakHandler:new()
+--    JwtKeycloakHandler.super.new(self, "jwt-keycloak")
+-- end
 
 local function load_consumer(consumer_id, anonymous)
     local result, err = kong.db.consumers:select { id = consumer_id }
@@ -445,7 +445,7 @@ local function do_authentication(conf)
 end
 
 function JwtKeycloakHandler:access(conf)
-    JwtKeycloakHandler.super.access(self)
+--    JwtKeycloakHandler.super.access(self)
 
     kong.log.debug('Calling access()')
     -- check if preflight request and whether it should be authenticated
