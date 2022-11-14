@@ -1,5 +1,7 @@
 **DISCLAIMER:**
- 
+
+Forked to fix issues with Kong 3.x
+
 This project is a fork of https://github.com/gbbirkisson/kong-plugin-jwt-keycloak that has been improved with functionality for working with [kong-oidc](https://github.com/PSheshenya/kong-oidc) plugin.
 
 The **kong-oidc** plugin adds an additional ```X-Userinfo```, ```X-Access-Token``` and ```X-Id-Token``` headers to the upstream request, which can be consumed in jwt-keycloak plugin. 
