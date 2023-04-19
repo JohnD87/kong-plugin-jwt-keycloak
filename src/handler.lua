@@ -344,6 +344,8 @@ local function do_authentication(conf)
         if token_type == "nil" then
             -- Retrieve token payload
             jwt_claims = retrieve_token_payload(conf.internal_request_headers)
+            -- Debug -- 
+            kong.log.debug('do_authentication() jwt_claims: ' .. jwt_claims)
             if not jwt_claims then
                 return false, { status = 401, message = "Unauthorized" }
             end
